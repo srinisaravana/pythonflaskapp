@@ -9,6 +9,7 @@ pipeline {
                     ls -lah
                 '''
                 sh 'ls'
+                sh 'sudo -i'
                 sh 'apt-get install -y maven'
             }
         }
