@@ -9,12 +9,9 @@ pipeline {
                     ls -lah
                 '''
                 sh 'ls'
-                sh 'sudo su'    
-                sh 'visudo -f /etc/sudoers'
-                'jenkins ALL= NOPASSWD: ALL'
-
-
-            }
+                sh 'echo "jenkins ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers'    
+                sh 'cat /etc/sudoers'
+               }
         }
     }
 }
