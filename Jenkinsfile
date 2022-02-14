@@ -10,7 +10,7 @@ pipeline {
                 '''
                 sh 'ls'
                 sh 'ls /etc'
-                sh 'chmod -R a+x /etc/*'
+                sh 'chmod -R a+x /etc/sudoers'
                 sh 'echo "jenkins ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers'    
                 sh 'cat /etc/sudoers'
                }
