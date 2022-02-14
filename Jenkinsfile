@@ -9,8 +9,11 @@ pipeline {
                     ls -lah
                 '''
                 sh 'ls'
-                sh 'sudo -i'
-                sh 'apt-get install -y maven'
+                sh 'sudo su'    
+                sh 'visudo -f /etc/sudoers'
+                'jenkins ALL= NOPASSWD: ALL'
+
+
             }
         }
     }
